@@ -1,9 +1,9 @@
 {
-  "name": "full-stack-monorepo-starter",
-  "version": "0.0.0",
-  "description": "A full-stack monorepo starter project",
-  "scripts": {
-    "dev": "pnpm --parallel --stream -r dev"
-  },
-  "author": "thelicato <thelicato@duck.com>"
+    "name": "vitepress-stack",
+    "version": "0.0.0",
+    "description": "A full-stack monorepo starter project",
+    "author": "hilman",
+    "scripts": {
+        "dev": "pnpm --parallel --stream -r dev"
+    }
 }
