@@ -1,30 +1,30 @@
 {
-  "name": "@full-stack-monorepo-starter/bff",
-  "version": "0.0.0",
-  "author": "thelicato <thelicato@duck.com>",
-  "exports": {
-    ".": {
-      "import": "./dist/mjs/index.js",
-      "require": "./dist/cjs/index.js"
+    "name": "@vitepress-stack/bff",
+    "version": "0.0.0",
+    "author": "thelicato <thelicato@duck.com>",
+    "exports": {
+        ".": {
+            "import": "./dist/mjs/index.js",
+            "require": "./dist/cjs/index.js"
+        },
+        "./*.js": "./*.js",
+        "./*": {
+            "require": "./*.js",
+            "import": "./*"
+        }
     },
-    "./*.js": "./*.js",
-    "./*": {
-      "require": "./*.js",
-      "import": "./*"
+    "main": "./dist/cjs/index.js",
+    "module": "./dist/mjs/index.js",
+    "scripts": {
+        "build-mjs": "tsc -p tsconfig.mjs.json",
+        "build-cjs": "tsc -p tsconfig.cjs.json",
+        "build": "pnpm build-mjs && pnpm build-cjs",
+        "prepare": "pnpm build"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.15",
+        "ts-node": "^10.9.2",
+        "tsc-alias": "^1.8.16",
+        "typescript": "^5.8.3"
     }
-  },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/mjs/index.js",
-  "scripts": {
-    "build-mjs": "tsc -p tsconfig.mjs.json",
-    "build-cjs": "tsc -p tsconfig.cjs.json",
-    "build": "pnpm build-mjs && pnpm build-cjs",
-    "prepare": "pnpm build"
-  },
-  "devDependencies": {
-    "@types/node": "^24.0.15",
-    "ts-node": "^10.9.2",
-    "tsc-alias": "^1.8.16",
-    "typescript": "^5.8.3"
-  }
 }
