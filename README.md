@@ -11,5 +11,5 @@
 This project adheres to a monorepo structure, which separates the backend and frontend into their respective directories:
 
 -   backend/: Contains the Express.js backend application.
--   frontend/: Houses the React.js frontend application.
+-   frontend/: Houses the Vite.js frontend application.
 -   bff/: Demonstrates the creation and management of a shared TypeScript package for common types and utilities.
